@@ -15,28 +15,28 @@ defined( 'ABSPATH' ) or die( 'Unauthorized Access!' );
   
 
 
-  function wp_rippleeffect_add_menu_page(){
+  function wp_ripple_effect_add_menu_page(){
     add_menu_page(
     __('Ripple Effect Background', 'ripple-effect-backgroud-wp'),
     __('Ripple Effect Background', 'ripple-effect-backgroud-wp'),
     'manage_options',
-    'wp_rippleeffect_background',
-    'wp_rippleeffect_render_menu_page',
+    'wp_ripple_effect_background',
+    'wp_ripple_effect_render_menu_page',
     'dashicons-image-filter',
     99);
 	}
-add_action( 'admin_menu', 'wp_rippleeffect_add_menu_page' );
+add_action( 'admin_menu', 'wp_ripple_effect_add_menu_page' );
 
-function wp_rippleeffect_admin_enqueue_scripts(){
-    wp_enqueue_style('wp_rippleeffect_admin-css-style',plugins_url('assets/css/admin.css',__FILE__));
+function wp_ripple_effect_admin_enqueue_scripts(){
+    wp_enqueue_style('wp_ripple_effect_admin-css-style',plugins_url('assets/css/admin.css',__FILE__));
 }
-add_action('admin_enqueue_scripts','wp_rippleeffect_admin_enqueue_scripts');
+add_action('admin_enqueue_scripts','wp_ripple_effect_admin_enqueue_scripts');
 
 
 
 
 
-function wp_rippleeffect_render_menu_page() {
+function wp_ripple_effect_render_menu_page() {
 	
 	
 
