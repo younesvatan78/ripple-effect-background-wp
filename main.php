@@ -4,7 +4,7 @@ Plugin Name: Ripple Effect Background
 Description: Add ripple effect to where ever you need.
 Text Domain: ripple-effect-background-wp
 Author: Younes Vatankhah 
-Author URI: https://www.zhaket.com/web/artman-wordpress-theme
+Author URI: https://github.com/younesvatan78/ripple-effect-background-wp
 License: GPLv2
 Version: 1.0.0
 
@@ -105,11 +105,9 @@ function wp_rippleeffect_render_menu_page() {
 		<p><button type='submit' class='button button-primary' style='min-width: 140px;'> ذخیره تغییرات</button></p>
 	</div>
 	<div class='ripple-effect-dash'>		
-		<h2>انتخاب مکان و یا استفاده از کد کوتاه</h2>
+		<h2>کد کوتاه</h2>
 		<div class='setting'>
-			<label>کد کوتاه 
 				<input type='text' value='[ripple-effect-background]' onclick='this.select()' readonly >
-			</label>
 		</div>
 	</div>
 	<div class='ripple-effect-dash'>
