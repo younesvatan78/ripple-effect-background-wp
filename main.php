@@ -23,9 +23,8 @@ defined( 'ABSPATH' ) or die( 'Unauthorized Access!' );
     'wp_rippleeffect_background',
     'wp_rippleeffect_render_menu_page',
     'dashicons-image-filter',
-    99
-    );
-}
+    99);
+	}
 add_action( 'admin_menu', 'wp_rippleeffect_add_menu_page' );
 
 function wp_rippleeffect_admin_enqueue_scripts(){
@@ -41,7 +40,7 @@ function wp_rippleeffect_render_menu_page() {
 	
 	
 
-	wp_enqueue_script( 'ripple_effect-admin-js', ripple_effect_PLUGINS_URL . '/assets/js/admin.js');
+	wp_enqueue_script( 'ripple_effect-admin-js', plugins_url( '/assets/js/admin.js',__FILE__ ));
 
 	wp_enqueue_script('media-library',plugins_url('assets/js/media-library.js', __FILE__ ), array( 'jquery' ));
 	 
