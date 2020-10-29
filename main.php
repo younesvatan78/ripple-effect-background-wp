@@ -40,7 +40,6 @@ function wp_ripple_effect_render_menu_page() {
 	
 	
 
-	wp_enqueue_script( 'ripple_effect-admin-js', plugins_url( '/assets/js/admin.js',__FILE__ ));
 
 	wp_enqueue_script('media-library',plugins_url('assets/js/media-library.js', __FILE__ ), array( 'jquery' ));
 	 
@@ -115,12 +114,12 @@ function wp_ripple_effect_render_menu_page() {
 			<h3 style="font-size: 15px;">تصویر پس زمینه</h3>
 			<?php
 			$value = get_option( 'select_img_ripple_effect' ); ?>
-				<input id="upload_image" type="hidden" size="36" name="ripple_effect[select_img_ripple_effect]"value="<?php echo $value; ?>" />
+				<input id="upload_image_input" type="hidden" size="36" name="ripple_effect[select_img_ripple_effect]"value="<?php echo $value; ?>" />
 
 				<img id="imgClickAndChange" style="display:flex; max-height: 300px; max-width: 300px" src="<?php  	echo $value; ?>">
 
 				<div style = "display: block">
-					<input id="upload_image_button" style="margin : 20px 10px!important" class="button"      	type="button" value="انتخاب تصویر" />
+					<input id="upload_image_button_ripple" style="margin : 20px 10px!important" class="button"      	type="button" value="انتخاب تصویر" />
 
 					<input id="remove_image_button"style="margin : 20px 10px!important" class="button" type="button" value="پاک کردن تصویر" />
 				</div>
