@@ -3,7 +3,7 @@
 Plugin Name: Ripple Effect Background
 Description: Add ripple effect to where ever you need.
 Text Domain: ripple-effect-background-wp
-Author: Younes Vatankhah 
+Author: Younes Vatankhah
 Author URI: https://github.com/younesvatan78/ripple-effect-background-wp
 License: GPLv2
 Version: 1.0.0
@@ -216,23 +216,23 @@ function wp_ripple_effect_render_menu_page() {
 
 
 		
-		return <<<HTML
+		return '
 		<section class="hero-area-fix" style="background: url($img) no-repeat scroll center center;">
 		<div class="hero-area" id="water">
 			<div class="container">
 				<div class="row-ripple-effect">
 					<div class="hero-text">
-						{$first_text}
-						{$animated_has_value}
-						<div style="direction:rtl;">{$second_text}</div>
-						{$btn_two_has_value}
-						{$btn_one_has_value}
+						'.$first_text.'
+						'.$animated_has_value.'
+						<div style="direction:rtl;">'.$second_text.'</div>
+						'.$btn_two_has_value.'
+						'.$btn_one_has_value.'
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	HTML;
+	';
 	}
 	
 
