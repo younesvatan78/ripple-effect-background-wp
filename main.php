@@ -217,7 +217,7 @@ function wp_ripple_effect_render_menu_page() {
 
 		
 		return '
-		<section class="hero-area-fix" style="background: url($img) no-repeat scroll center center;">
+		<section class="hero-area-fix" style="background: url('.$img.') no-repeat scroll center center;">
 		<div class="hero-area" id="water">
 			<div class="container">
 				<div class="row-ripple-effect">
