@@ -3,8 +3,8 @@
 Plugin Name: Ripple Effect Background
 Description: Add ripple effect to where ever you need.
 Text Domain: ripple-effect-background-wp
-Author: Younes Vatankhah 
-Author URI: https://www.zhaket.com/web/artman-wordpress-theme
+Author: Younes Vatankhah
+Author URI: https://github.com/younesvatan78/ripple-effect-background-wp
 License: GPLv2
 Version: 1.0.0
 
@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) or die( 'Unauthorized Access!' );
   
 
 
-  function wp_rippleeffect_add_menu_page(){
+  function wp_ripple_effect_add_menu_page(){
     add_menu_page(
     __('Ripple Effect Background', 'ripple-effect-backgroud-wp'),
     __('Ripple Effect Background', 'ripple-effect-backgroud-wp'),
@@ -25,10 +25,14 @@ defined( 'ABSPATH' ) or die( 'Unauthorized Access!' );
     'dashicons-image-filter',
     99);
 	}
-add_action( 'admin_menu', 'wp_rippleeffect_add_menu_page' );
+add_action( 'admin_menu', 'wp_ripple_effect_add_menu_page' );
 
 function wp_ripple_effect_admin_enqueue_scripts(){
+<<<<<<< HEAD
     wp_enqueue_style('wp_rippleeffect_admin-css-style',plugins_url('assets/css/admin.css',__FILE__));
+=======
+    wp_enqueue_style('wp_ripple_effect_admin-css-style',plugins_url('assets/css/admin.css',__FILE__));
+>>>>>>> 305a6125c21ce9fa700e78bade2631df1451554e
 }
 add_action('admin_enqueue_scripts','wp_ripple_effect_admin_enqueue_scripts');
 
@@ -104,11 +108,9 @@ function wp_ripple_effect_render_menu_page() {
 		<p><button type='submit' class='button button-primary' style='min-width: 140px;'> ذخیره تغییرات</button></p>
 	</div>
 	<div class='ripple-effect-dash'>		
-		<h2>انتخاب مکان و یا استفاده از کد کوتاه</h2>
+		<h2>کد کوتاه</h2>
 		<div class='setting'>
-			<label>کد کوتاه 
 				<input type='text' value='[ripple-effect-background]' onclick='this.select()' readonly >
-			</label>
 		</div>
 	</div>
 	<div class='ripple-effect-dash'>
@@ -218,23 +220,23 @@ function wp_ripple_effect_render_menu_page() {
 
 
 		
-		return <<<HTML
-		<section class="hero-area-fix" style="background: url($img) no-repeat scroll center center;">
+		return '
+		<section class="hero-area-fix" style="background: url('.$img.') no-repeat scroll center center;">
 		<div class="hero-area" id="water">
 			<div class="container">
 				<div class="row-ripple-effect">
 					<div class="hero-text">
-						{$first_text}
-						{$animated_has_value}
-						<div style="direction:rtl;">{$second_text}</div>
-						{$btn_two_has_value}
-						{$btn_one_has_value}
+						'.$first_text.'
+						'.$animated_has_value.'
+						<div style="direction:rtl;">'.$second_text.'</div>
+						'.$btn_two_has_value.'
+						'.$btn_one_has_value.'
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	HTML;
+	';
 	}
 	
 
